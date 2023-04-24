@@ -6,7 +6,7 @@ module guess_game(
 wire clk = io_in[0]; 
 wire rst = io_in[1]; 
 wire [5:0] guess = io_in[7:2]; 
-wire [5:0] result; 
+reg [5:0] result; 
 assign io_out[5:0] = result; 
 
 reg [5:0] secret_num; 
