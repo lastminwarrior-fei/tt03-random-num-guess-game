@@ -13,29 +13,31 @@ async def test_my_design(dut):
     await ClockCycles(dut.clk, 1)
     dut.rst.value = 0
     dut._log.info("reset")
-    dut._log.info("result 0: " + str(dut.result.value))
     
     dut.guess.value = 0b000000
     await ClockCycles(dut.clk, 1)
+    dut._log.info("result 0: " + str(dut.result.value))
     dut._log.info("guess 1: " + str(dut.guess.value))
-    dut._log.info("result 1: " + str(dut.result.value)) 
     
     dut.guess.value = 0b000001
     await ClockCycles(dut.clk, 1)
+    dut._log.info("result 1: " + str(dut.result.value))
     dut._log.info("guess 2: " + str(dut.guess.value))
-    dut._log.info("result 2: " + str(dut.result.value)) 
     
     dut.guess.value = 0b000011
     await ClockCycles(dut.clk, 1)
+    dut._log.info("result 2: " + str(dut.result.value)) 
     dut._log.info("guess 3: " + str(dut.guess.value))
-    dut._log.info("result 3: " + str(dut.result.value)) 
     
     dut.guess.value = 0b000000
     await ClockCycles(dut.clk, 1)
+    dut._log.info("result 3: " + str(dut.result.value))
     dut._log.info("guess 4: " + str(dut.guess.value))
-    dut._log.info("result 4: " + str(dut.result.value)) 
     
     dut.guess.value = 0b000000
     await ClockCycles(dut.clk, 1)
+    dut._log.info("result 4: " + str(dut.result.value))
     dut._log.info("guess 5: " + str(dut.guess.value))
+    
+    await ClockCycles(dut.clk, 1)
     dut._log.info("result 5: " + str(dut.result.value)) 
