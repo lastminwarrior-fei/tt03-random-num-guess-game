@@ -19,7 +19,7 @@ initial begin
 end
 
 // reset the game
-always @(posedge rst) begin
+    always @(negedge rst) begin
     secret_num <= $random;
     guess_count <= 0;
     result <= 6'b000000;
