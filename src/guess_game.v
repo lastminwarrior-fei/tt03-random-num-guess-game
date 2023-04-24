@@ -26,7 +26,7 @@ always @(negedge rst) begin
 end
 
 // check guess and output result
-always @(posedge clk) begin
+    always @(guess and posedge clk) begin
     if (guess_count < 3) begin
         if (guess == secret_num) begin
             result <= 6'b111111;
