@@ -14,12 +14,12 @@ reg [2:0] guess_count;
 
 // initialize variables
 initial begin
-    secret_num = $random;
+    secret_num = 6'b000000; 
     guess_count = 0;
 end
 
 // reset the game
-    always @(negedge rst) begin
+always @(negedge rst) begin
     secret_num <= $random;
     guess_count <= 0;
     result <= 6'b000000;
