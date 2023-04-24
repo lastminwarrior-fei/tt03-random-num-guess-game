@@ -26,7 +26,7 @@ async def test_my_design(dut):
     dut._log.info("result 2: " + str(dut.result.value)) 
     
     dut.guess.value = 0b000011
-     await ClockCycles(dut.clk, 1)
+    await ClockCycles(dut.clk, 1)
     dut._log.info("guess 3: " + str(dut.guess.value))
     dut._log.info("result 3: " + str(dut.result.value)) 
     
